@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head> 
+<title>Process 2 (PP)</title>
+<h1 align="center">Process 2 (PP)</h1>
+<style>
+div {
+  width: 10px;
+  height: 10px;
+  background: black;
+  position: relative;
+  animation: mymove 10s 1;
+  animation-delay: 1s;
+}
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 20px;}
+    
+</style>
+</head>
+ 
+<body bgcolor="" text="grey" div ="white">
+
+<h1 align="center"> Demo of setting-up virtualized test environment on demand</h1>
+<center>
+<h1 align="center"> This is Process 2 (PP)</h1>
+<center>
+
+<img src ="gs.jpg" height="300px" width="600px" > </img>
+<h3>We are now connecting to Process 1 (NMS)</h3>	
+<div></div>
+
+<script>
+	var i = 0; // Start point
+	var images = [];
+	var time = 10000;
+
+	// Image List
+	images[0] = 'image2.jpg';
+	images[1] = 'image1.jpg';
+
+	// Change Image
+	function changeImg(){
+		document.slide.src = images[i];
+
+		if(i < images.length - 1){
+			i++;
+		} else {
+		
+		}
+
+		setTimeout("changeImg()", time);
+	}
+
+	window.onload = changeImg;
+
+</script>
+
+<img name="slide" width="600px" height="300px">
+</center>
+</body>
